@@ -16,7 +16,8 @@ runtime around your own files; the game content is never modified on disk.
 
 - **Play in browser**: import your own copy (folder or `.zip`) once via `loader.html`, then just open the page to play. No Node/NW.js required.
 - **Offline play**: after the first import, a Service Worker serves every game file locally; the game keeps working with no connection.
-- **Multiple versions**: import several builds of the game side by side and switch between them; a guided wizard can drive your own Steam client (via `steam://` console commands) to download older depots for mods that need a specific version.
+- **Chromebook / browser-only setup**: open the loader in your browser and import a complete, unmodified game folder or `.zip` from your own files. No Steam desktop application needs to be installed on the Chromebook. Imports still undergo file-integrity verification, and managed-school browser policies may restrict local storage or file selection.
+- **Multiple versions**: import game builds you already have as folders or `.zip` archives and switch between them. The browser loader does not launch Steam or download game builds.
 - **Mods**: browse and install community overhauls, translations and plugins from the in-game **Mods** menu. Overhauls are exclusive (one active at a time), plugins can be combined freely, and saves are kept isolated per active mod.
 - **Data management**: clear/reset all browser data for a fresh start; save files can be exported and re-imported independently of the browser profile.
 

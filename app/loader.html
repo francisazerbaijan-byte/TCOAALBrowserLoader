@@ -2111,7 +2111,7 @@
             <p class="info">
               <span class="android-hide">Load your owned copy of the game into your browser,<br />
               either as a folder or as a .zip archive.</span>
-              <span class="android-only">Export your game from Steam as a <code>.zip</code> file and import it below.</span>
+              <span class="android-only">Import a complete, unmodified copy of your owned game files as a <code>.zip</code> archive below. The Steam desktop app is not required on this device.</span>
             </p>
             <p class="info-aside">
               Your files stay on your device and are never uploaded anywhere
@@ -3121,8 +3121,9 @@
           showError(
             "Required files missing",
             "Some files the game needs to start weren't found in the " +
-              "folder you selected. Make sure you pick the game's folder " +
-              "(the one named after the game) or its `www` subfolder.",
+              "folder or ZIP you selected. Import the complete game folder " +
+              "(or its `www` subfolder), preserving all subfolders. " +
+              "On a Chromebook, you can select a ZIP from Files without installing Steam.",
             "Missing:\n" + labels,
           );
           setImportButtonsDisabled(false);
@@ -3143,8 +3144,9 @@
             origin.reason === "no-greenworks"
               ? "The folder you imported has no `www/greenworks/lib`. Every " +
                   "Steam build of the game ships one, so this does not look " +
-                  "like a Steam installation. Import the game from your own " +
-                  "Steam library folder."
+                  "like a complete Steam installation. If you transferred the " +
+                  "game as a ZIP, check that you included the entire `www` " +
+                  "folder, including `greenworks/lib`, then import it again."
               : "The Steam library files in `www/greenworks/lib` do not match " +
                   "the ones Steam ships. This player only works with an " +
                   "unmodified copy from your own Steam library.",

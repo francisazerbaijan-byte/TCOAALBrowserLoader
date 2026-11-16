@@ -37,6 +37,9 @@ jobs:
           cp -R app _site/app
           cp LICENSE _site/LICENSE
           cp NOTICE.md _site/NOTICE.md
+          cp mods.json _site/mods.json
+          cp -R mods _site/mods
+          cp -R plugins _site/plugins
           touch _site/.nojekyll
           # Do not copy the upstream CNAME: this fork uses a GitHub Pages project URL.
       - name: Configure GitHub Pages

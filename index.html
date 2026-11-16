@@ -1,0 +1,62 @@
+<!doctype html>
+<!--
+  Browser Loader landing page
+  SPDX-License-Identifier: AGPL-3.0-or-later
+  This landing page is not a copy of the game and does not include game assets.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#171623">
+  <meta name="description" content="Browser-only launcher information and setup for a bring-your-own-files game loader.">
+  <title>Browser Loader | Chromebook setup</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:dark;background:#12111c;color:#f6f3ff}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#333050 0,transparent 48%),#12111c}
+    main{width:min(790px,calc(100% - 36px));margin:auto;padding:58px 0 40px}
+    .eyebrow{display:inline-flex;border:1px solid #70688e;border-radius:100px;padding:7px 13px;color:#e5caff;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+    h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.06;letter-spacing:-.045em;margin:23px 0 15px}
+    h1 span{color:#e9a7f4}p{line-height:1.7;color:#d0cbdf}
+    .intro{font-size:1.1rem;max-width:650px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 45px}
+    a.button{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:700;background:#f3b4f1;color:#1b1424}
+    a.button.secondary{background:transparent;border:1px solid #8e839e;color:#f5e9ff}
+    a:focus-visible{outline:3px solid #f3b4f1;outline-offset:4px}
+    section{margin-top:29px;padding:24px;background:#211e31;border:1px solid #3c354e;border-radius:18px}
+    section h2{margin:0 0 10px;font-size:1.25rem}
+    ol{padding-left:22px;color:#ded8eb;line-height:1.9;margin-bottom:0}
+    code{padding:3px 6px;border-radius:6px;background:#383148;color:#f6c8fd;overflow-wrap:anywhere}
+    .note{border-left:3px solid #e9a7f4;padding-left:14px}
+    footer{margin-top:35px;color:#ada6bc;font-size:.84rem}
+    footer a{color:#e9a7f4}
+    @media(max-width:480px){main{padding-top:35px}.actions{flex-direction:column}.button{width:100%}section{padding:19px}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Community browser loader · Free to host</div>
+    <h1>Play from your <span>browser.</span></h1>
+    <p class="intro">A Chromebook-friendly starting page for the browser loader. No desktop Steam installation is needed to open this page. The loader uses game files you already own and import yourself.</p>
+    <nav class="actions" aria-label="Primary">
+      <a class="button" href="./app/loader.html">Open file importer</a>
+      <a class="button secondary" href="https://github.com/francisazerbaijan-byte/TCOAALBrowserLoader">View source on GitHub</a>
+    </nav>
+    <section>
+      <h2>Using your own game files</h2>
+      <ol>
+        <li>Have a complete, unmodified copy of your legitimately obtained game files available on your device.</li>
+        <li>Open the browser importer and select the game folder or ZIP archive.</li>
+        <li>Keep the browser's site data enabled if you want imported files and saves to persist.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Important setup notes</h2>
+      <p>The loader still checks imported files for integrity and origin. This homepage does not disable license checks or include copyrighted game files.</p>
+      <p class="note">GitHub Pages project sites live under a repository subpath. The existing browser loader includes root-relative URLs and service-worker paths, so those must be adapted for a fully functional project-site deployment. School-managed Chromebooks can also restrict storage or file access.</p>
+    </section>
+    <footer>Community project · Not affiliated with the game's publisher · <a href="./LICENSE">Open-source license</a></footer>
+  </main>
+</body>
+</html>

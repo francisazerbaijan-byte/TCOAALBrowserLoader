@@ -3218,7 +3218,7 @@
           } catch (e) {}
           setStatus("Ready! Launching game...", "ok");
           setTimeout(() => {
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
           }, 600);
           return true;
         }
@@ -3234,7 +3234,7 @@
           } catch (e) {}
           setStatus("Ready! Launching game...", "ok");
           setTimeout(() => {
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
           }, 600);
           return true;
         }
@@ -3256,7 +3256,7 @@
         // The game favicon (icon/icon.png) belongs to the playing game only;
         // index.html sets it on boot. The loader keeps the app favicon.
         setTimeout(() => {
-          window.location.href = "/index.html";
+          window.location.href = "index.html";
         }, 600);
         return true;
       }
@@ -3268,7 +3268,7 @@
       async function loadExpectedManifest() {
         if (_expectedManifestCache) return _expectedManifestCache;
         try {
-          const r = await fetch("/expected-files.json", {
+          const r = await fetch("expected-files.json", {
             cache: "no-cache",
           });
           if (!r.ok) return null;
@@ -4178,7 +4178,7 @@
         if (btn) {
           btn.textContent = "Reloading...";
         }
-        location.replace("/loader.html");
+        location.replace("loader.html");
         setTimeout(() => location.reload(), 1500);
       }
 
@@ -4748,7 +4748,7 @@
         try {
           localStorage.setItem("_healthcheckAcknowledged", "1");
         } catch (e) {}
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
       }
 
       // PLAY-button version control: only relevant once the user has more
@@ -5041,7 +5041,7 @@
         if ($btnClear) {
           $btnClear.textContent = "Reloading...";
         }
-        location.replace("/loader.html");
+        location.replace("loader.html");
         setTimeout(() => location.reload(), 1500);
       }
 

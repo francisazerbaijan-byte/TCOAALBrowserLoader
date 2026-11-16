@@ -92,11 +92,6 @@ const APP_SHELL = [
   // for the page to work offline. NOTICE.md lives at the repo root, not under
   // app/; the deploy workflow copies it into the site (see deploy-web.yml).
   "/NOTICE.md",
-  // The Steam version-download helper: unlisted, reachable by URL only, so it
-  // is shelled here rather than found through a link. Its version catalog is
-  // fetched from the repo at runtime and is NOT part of the site, so offline
-  // the page still opens and explains itself, it just cannot list builds.
-  "/download.html",
   "/lock.html",
   "/lock.json",
   "/manifest.webmanifest",

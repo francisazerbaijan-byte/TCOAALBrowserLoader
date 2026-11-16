@@ -903,7 +903,7 @@
             btn.disabled = true;
             btn.textContent = "Reloading...";
           }
-          location.replace("/loader.html");
+          location.replace("loader.html");
           setTimeout(function () {
             location.reload();
           }, 1500);
@@ -935,7 +935,7 @@
               JSON.stringify(payload),
             );
           } catch (e) {}
-          window.location.href = "/loader.html#report";
+          window.location.href = "loader.html#report";
         };
 
         window.__bootToggleDiag = function () {
@@ -1264,7 +1264,7 @@
               } catch (e) {}
               setPhase("migrate", "Updating stored game data...");
               return wipeGameDataKeepSaves(false).then(function () {
-                location.replace("/loader.html");
+                location.replace("loader.html");
                 return "reimport";
               });
             }
@@ -1320,7 +1320,7 @@
         // Resolves true when complete (or when the manifest can't be
         // loaded: we don't gate boot on a missing manifest).
         function healthcheckOk(db) {
-          return fetch("/expected-files.json", { cache: "no-cache" })
+          return fetch("expected-files.json", { cache: "no-cache" })
             .then(function (r) {
               return r.ok ? r.json() : null;
             })
@@ -2294,7 +2294,7 @@
               return checkServer().then(function (ok) {
                 if (!ok) {
                   // No IDB and no server, send to loader.
-                  location.replace("/loader.html");
+                  location.replace("loader.html");
                   return null;
                 }
                 return { db: null, files: null, server: true };
@@ -2309,7 +2309,7 @@
                 return checkServer().then(function (ok) {
                   if (ok) return { db: db, files: null, server: true };
                   // Nothing to play: send back to import flow.
-                  location.replace("/loader.html");
+                  location.replace("loader.html");
                   return null;
                 });
               }
@@ -2344,7 +2344,7 @@
               if (acknowledged) return { db: db, files: files, server: false };
               return healthcheckOk(db).then(function (ok) {
                 if (!ok) {
-                  location.replace("/loader.html");
+                  location.replace("loader.html");
                   return null;
                 }
                 return { db: db, files: files, server: false };
